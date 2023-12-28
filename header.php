@@ -8,7 +8,7 @@
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
 
   <?php wp_head(); ?>
 </head>
@@ -39,10 +39,18 @@
                 <ul class="menu flex flex-col">
                   <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>">Beranda</a></li>
                   <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/tentang-kami">Tentang Kami</a></li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu">Menu</a></li>
+                  <!-- <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li> -->
+                  <li class="py-2"><span class="text-lg text-primary" href="#">Menu</span>
+                    <ul class="pl-2">
+                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/paket-buffet">Paket Buffet</a></li>
+                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/menu-buffet">Menu Buffet</a></li>
+                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/menu-gubukan">Menu Gubukan</a></li>
+                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/box-nasi">Box Nasi</a></li>
+                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/coffee-break-snack-box">Coffee Break / Snack Box</a></li>
+                    </ul>
+                  </li>
                   <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/galeri">Galeri</a></li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li>
+                  <!-- <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li> -->
                   <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/kontak-kami">Kontak Kami</a></li>
                   <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/lokasi-kami">Lokasi Kami</a></li>
                 </ul>
@@ -52,14 +60,33 @@
           <div>
             <a href="/"><img class="h-12 xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="Yvonne Catering" /></a>
           </div>
-          <div>
-            <ul class="menu hidden xl:flex">
+          <div class="hidden xl:flex">
+            <ul class="menu flex">
               <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>">Beranda</a></li>
               <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/tentang-kami">Tentang Kami</a></li>
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li>
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu">Menu</a></li>
+              <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li> -->
+              <li class="px-4 relative">
+                <a id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="text-lg text-primary hover:underline" href="#">Menu</a>
+                <ul class="dropdown-menu min-w-max absolute hidden bg-white text-lg z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/paket-buffet">Paket Buffet</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/menu-buffet">Menu Buffet</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/menu-gubukan">Menu Gubukan</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/box-nasi">Box Nasi</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/coffee-break-snack-box">Coffee Break / Snack Box</a>
+                  </li>
+                </ul>
+              </li>
               <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/galeri">Galeri</a></li>
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li>
+              <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li> -->
               <li class="px-4 relative">
                 <a id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="text-lg text-primary hover:underline" href="#">Hubungi Kami</a>
                 <ul class="dropdown-menu min-w-max absolute hidden bg-white text-lg z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none" aria-labelledby="dropdownMenuButton">
