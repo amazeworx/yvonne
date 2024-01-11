@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Menu - Menu Snack
+ * Template Name: Menu - Menu Snack 2
  * Template Post Type: page
  *
  */

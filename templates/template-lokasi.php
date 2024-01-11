@@ -17,7 +17,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="w-full lg:w-8/12">
-        <div class="prose max-w-none lg:prose-lg -mt-8 prose-a:text-[#4f5cd6]">
+        <div class="prose prose-slate max-w-none lg:prose-lg -mt-8 prose-a:text-[#4f5cd6]">
           <?php the_content() ?>
         </div>
       </div>

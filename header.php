@@ -14,97 +14,75 @@
 </head>
 
 <body <?php body_class('bg-white text-black'); ?>>
+  <div class="drawer drawer-end">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+    <?php do_action('yvonne_site_before'); ?>
 
-  <?php do_action('yvonne_site_before'); ?>
+    <div class="drawer-content">
+      <div id="page" class="min-h-screen flex flex-col">
 
-  <div id="page" class="min-h-screen flex flex-col">
+        <?php do_action('yvonne_header'); ?>
 
-    <?php do_action('yvonne_header'); ?>
-
-    <header class="bg-white fixed w-full top-0 left-0 right-0 z-20">
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <div class="xl:hidden">
-            <button class="inline-block p-2.5 bg-white text-primary rounded hover:bg-white focus:bg-white focus:outline-none focus:ring-0 active:bg-white mr-4 -ml-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 11H16V13H4V11ZM4 6H20V8H4V6ZM4 18H11.235V16H4V18Z" fill="currentColor" />
-              </svg>
-            </button>
-            <div class="offcanvas offcanvas-start fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 left-0 border-none w-60" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-              <div class="offcanvas-header flex items-center justify-between p-4">
-                <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasRightLabel">&nbsp;</h5>
-                <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <header class="bg-white fixed w-full top-0 left-0 right-0 z-30">
+          <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-x-4 items-center">
+                <a href="/"><img class="h-12 xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="Yvonne Catering" /></a>
+                <img class="h-10 lg:hidden xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/50th-header.png" alt="" />
               </div>
-              <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-                <ul class="menu flex flex-col">
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>">Beranda</a></li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/tentang-kami">Tentang Kami</a></li>
-                  <!-- <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li> -->
-                  <li class="py-2"><span class="text-lg text-primary" href="#">Menu</span>
-                    <ul class="pl-2">
-                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/paket-buffet">Paket Buffet</a></li>
-                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/menu-buffet">Menu Buffet</a></li>
-                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/menu-gubukan">Menu Gubukan</a></li>
-                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/box-nasi">Box Nasi</a></li>
-                      <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/menu/coffee-break-snack-box">Coffee Break / Snack Box</a></li>
+              <div class="hidden lg:flex">
+                <ul class="flex">
+                  <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>">Beranda</a></li>
+                  <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/tentang-kami">Tentang Kami</a></li>
+                  <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li> -->
+                  <li class="dropdown px-4 relative">
+                    <div tabindex="0" role="button" class="text-lg text-primary hover:underline">Menu</div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-md border border-solid border-slate-100 bg-white rounded-box">
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/menu/paket-buffet">Paket Buffet</a>
+                      </li>
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/menu/menu-buffet">Menu Buffet</a>
+                      </li>
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/menu/menu-gubukan">Menu Gubukan</a>
+                      </li>
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/menu/box-nasi">Box Nasi</a>
+                      </li>
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/menu/coffee-break-snack-box">Coffee Break / Snack Box</a>
+                      </li>
                     </ul>
                   </li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/galeri">Galeri</a></li>
-                  <!-- <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li> -->
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/kontak-kami">Kontak Kami</a></li>
-                  <li class="py-2"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/lokasi-kami">Lokasi Kami</a></li>
+                  <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/galeri">Galeri</a></li>
+                  <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li> -->
+                  <li class="dropdown px-4 relative">
+                    <div tabindex="0" role="button" class="text-lg text-primary hover:underline">Hubungi Kami</div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-md border border-solid border-slate-100 bg-white rounded-box">
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/kontak-kami">Kontak Kami</a>
+                      </li>
+                      <li>
+                        <a class="text-lg py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100 active:!bg-primary active:!text-white" href="<?php echo site_url(); ?>/lokasi-kami">Lokasi Kami</a>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
+              </div>
+              <div class="hidden lg:block">
+                <img class="h-10 xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/50th-header.png" alt="" />
+              </div>
+              <div class="lg:hidden">
+                <label for="my-drawer" class="inline-block p-2 bg-white text-primary rounded hover:bg-white focus:bg-white focus:outline-none focus:ring-0 active:bg-white -ml-2 drawer-button">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 11H16V13H4V11ZM4 6H20V8H4V6ZM4 18H11.235V16H4V18Z" fill="currentColor" />
+                  </svg>
+                </label>
+
               </div>
             </div>
           </div>
-          <div>
-            <a href="/"><img class="h-12 xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="Yvonne Catering" /></a>
-          </div>
-          <div class="hidden xl:flex">
-            <ul class="menu flex">
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>">Beranda</a></li>
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/tentang-kami">Tentang Kami</a></li>
-              <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/layanan">Layanan</a></li> -->
-              <li class="px-4 relative">
-                <a id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="text-lg text-primary hover:underline" href="#">Menu</a>
-                <ul class="dropdown-menu min-w-max absolute hidden bg-white text-lg z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none" aria-labelledby="dropdownMenuButton">
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/paket-buffet">Paket Buffet</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/menu-buffet">Menu Buffet</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/menu-gubukan">Menu Gubukan</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/box-nasi">Box Nasi</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/menu/coffee-break-snack-box">Coffee Break / Snack Box</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/galeri">Galeri</a></li>
-              <!-- <li class="px-4"><a class="text-lg text-primary hover:underline" href="<?php echo site_url(); ?>/testimoni">Testimoni</a></li> -->
-              <li class="px-4 relative">
-                <a id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="text-lg text-primary hover:underline" href="#">Hubungi Kami</a>
-                <ul class="dropdown-menu min-w-max absolute hidden bg-white text-lg z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none" aria-labelledby="dropdownMenuButton">
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/kontak-kami">Kontak Kami</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-lg py-2 px-5 font-normal block w-full whitespace-nowrap bg-transparent text-primary hover:bg-gray-100" href="<?php echo site_url(); ?>/lokasi-kami">Lokasi Kami</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img class="h-10 xl:h-20" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/50th-header.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </header>
+        </header>
 
-    <main>
+        <main>

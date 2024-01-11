@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Menu - Menu Gubukan
+ * Template Name: Menu - Menu Gubukan 2
  * Template Post Type: page
  *
  */

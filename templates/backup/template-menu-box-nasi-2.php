@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Menu - Menu Box Nasi
+ * Template Name: Menu - Menu Box Nasi 2
  * Template Post Type: page
  *
  */
