@@ -11,12 +11,12 @@ get_header(); ?>
 <div class="min-h-screen bg-[#f3f5f4] relative z-0 pt-[80px] lg:pt-[112px]">
   <div class="container mx-auto pt-6 pb-44 px-4 lg:pt-12 lg:pb-6">
     <div class="relative">
-      <div class="absolute top-0 right-0 hidden lg:block">
+      <!-- <div class="absolute top-0 right-0 hidden lg:block">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/frame-tr.jpg" alt="">
-      </div>
-      <div class="absolute bottom-0 left-0 hidden lg:block">
+      </div> -->
+      <!-- <div class="absolute bottom-0 left-0 hidden lg:block">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/frame-bl.jpg" alt="">
-      </div>
+      </div> -->
       <div class="relative min-h-[500px] pt-8 pb-0 xl:pl-48 xl:pr-40 lg:pb-16">
         <h2 class="text-primary font-semibold text-2xl uppercase tracking-widest mb-6">Kontak Kami</h2>
         <div class="mb-12">

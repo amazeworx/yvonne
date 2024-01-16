@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <div class="min-h-screen bg-[#f3f5f4] relative z-0 pt-[80px] lg:pt-[112px]">
-  <div class="container mx-auto pt-6 pb-44 px-4 lg:pt-12 lg:pb-12">
+  <div class="container mx-auto pt-6 pb-44 px-4 lg:pt-6 lg:pb-12 xl:pt-12 xl:pb-12">
     <div class="flex flex-wrap lg:flex-nowrap">
       <div class="w-full lg:w-4/12">
         <div class="max-w-[260px] mx-auto lg:max-w-none lg:mt-16">
